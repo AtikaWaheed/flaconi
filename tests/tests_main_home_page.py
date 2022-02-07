@@ -1,9 +1,9 @@
-from tests.base_test import BaseTests
+from tests.test_base import TestsBase
 from pages.main_home_page import HomePage
 from constants import HOME_PAGE_TITLE, CSS_COOKIES
 
 
-class FlaoniHomePageTests(BaseTests):
+class FlaoniHomePageTests(TestsBase):
     """
     This class contains all Landing Page test functions
     """

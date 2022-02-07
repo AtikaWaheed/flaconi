@@ -5,7 +5,7 @@ import unittest
 from selenium import webdriver
 
 
-class BaseTests(unittest.TestCase):
+class TestsBase(unittest.TestCase):
     """
     Base Test Class
     """
