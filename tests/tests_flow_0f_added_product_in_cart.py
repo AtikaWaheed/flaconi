@@ -34,7 +34,6 @@ class FlaoniProductCategoryTests(BaseTests):
 
         selected_product_brand_name = self.product_category_page.choose_random_product_from_category()
         self.assertEqual(self.product_details_page.get_selected_product_type(), selected_product_brand_name)
-        # from nose.tools import set_trace;set_trace()
 
         # Click on ADD to cart button
         self.product_details_page.get_add_to_cart_button().click()
