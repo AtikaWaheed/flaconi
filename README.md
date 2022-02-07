@@ -1,17 +1,14 @@
-AutomationPractice Tests
 
-End-to-end tests for Flaconi
+
+# Flaconi-e2e-tests
 
 Pre reqs:
-1- Install chrome and chrome driver
 
-2- Install Virtualenv `pip install virtualenv`
+1- Install chrome and chrome driver.
 
-3- Create Virtualenv `virtualenv my_project`
+2- Install python `brew install python3` (pip3 will already installed)
 
-4- Activate Virtualenv `source my_project/bin/activate`
-
-5- cd into Store_Project_Selenium folder cd Store_Project_Selenium
+2- Install selenium `pip3 install selenium`
 
 Running Tests
 1- To run all the tests: nosetests -v
