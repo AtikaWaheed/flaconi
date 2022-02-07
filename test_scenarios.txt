@@ -1,0 +1,28 @@
+<!-- Site: Flaconi -->
+
+**TestCase Scenario:1- Validate Main Navigation options and Sublinks**
+
+Steps:
+1- Site should be accessible.
+2- Validate Source Page Title.
+3- Validate Cookies popup.
+4- Hover over nav option 'MakeUP'.
+5- Validate all sublinks under MakeUP.
+6- Validate all links return 200 status code.
+
+
+**TestCase Scenario:2- Validate FLow of adding product in cart and Voucher code error**
+
+Steps:
+1- Site should be accessible.
+2- Validate Cookies popup.
+3- Click {Parfum} main navigation option.
+3- Validate header text.
+4- Select random product from category page.
+5- Validate clicked product brand title.
+6- Add product in the cart.
+7- Validate cart modal dialogue with added product.
+8- Click 'Go to cart' button.
+9- Validate Shopping cart page is opened.
+10- Enter wrong voucher code and submit button.
+11- Validate error message for wrong entered voucher code.x`
