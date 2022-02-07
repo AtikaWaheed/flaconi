@@ -24,7 +24,7 @@ class ProductDetailsPage(BasePage):
 
     def get_add_to_cart_button(self):
         """
-        Get element of Add to cart button
+        Get element of 'Add to cart button'
         """
         return self.wait_for_css_for_single_element("button[class*='PDPActionBarstyle__Button'] ")
 
