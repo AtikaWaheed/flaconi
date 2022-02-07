@@ -1,13 +1,12 @@
-from tests.base_test import BaseTests
+from tests.test_base import TestsBase
 from pages.main_home_page import HomePage
 from pages.product_category_page import ProductsCategoryPage
 from pages.product_details_page import ProductDetailsPage
 from pages.product_cart_page import ShoppingCartPage
 from constants import WRONG_VOUCHER_CODE, CSS_COOKIES
-import time
 
 
-class FlaoniProductCategoryTests(BaseTests):
+class FlaoniProductCategoryTests(TestsBase):
     """
     This class contains all Landing Page test functions
     """
