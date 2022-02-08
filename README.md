@@ -2,13 +2,13 @@
 
 # Flaconi-e2e-tests
 
-##Pre reqs
+#Pre reqs
 
 - Python 3.8
 - Browser Chrome
 - Chrome Driver
 
-##Installations
+#Installations
 
 1- Install selenium `pip3 install selenium`
 
