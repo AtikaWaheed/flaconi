@@ -3,7 +3,7 @@ Flaconi Main Home Page
 """
 import requests
 from pages.base_page import BasePage
-from constants import BASE_URL, CSS_FOR_NAV_OPTIONS
+from constants import BASE_URL, CSS_FOR_NAV_OPTIONS, CSS_FOOTER
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 
@@ -20,7 +20,7 @@ class HomePage(BasePage):
         """
         self.wait_for_ajax()
         page_title = self.driver.title
-        self.wait_for_visibility_of_element('.c-page-foot.o-wrapper')
+        self.wait_for_visibility_of_element(CSS_FOOTER)
         return page_title
 
     def privacy_accept_cookies(self, css_selector):
@@ -30,14 +30,13 @@ class HomePage(BasePage):
         self.wait_for_ajax()
         self.driver.implicitly_wait(3)
         return self.driver.execute_script(
-            "document.querySelector('#usercentrics-root').shadowRoot.querySelector('" + css_selector + "').click()")
+            f"document.querySelector('#usercentrics-root').shadowRoot.querySelector('{css_selector}').click()")
 
     def get_main_nav_option(self, main_nav_option_count):
         """
         Get {required} element from main navigation
         """
-        return self.wait_for_css_for_single_element('{}:nth-child({})'.
-                                                    format(CSS_FOR_NAV_OPTIONS, main_nav_option_count))
+        return self.wait_for_css_for_single_element(f'{CSS_FOR_NAV_OPTIONS}:nth-child({main_nav_option_count})')
 
     def hover_over_main_nav_option_and_verify_all_sublinks(self, main_nav_option_count):
         """
@@ -50,8 +49,9 @@ class HomePage(BasePage):
         nav_makeup_option = self.get_main_nav_option(main_nav_option_count)
         a.move_to_element(nav_makeup_option).perform()
 
-        href_elems = self.wait_for_css_for_all_elements("{}:nth-child({}) > ul > li [href]".
-                                                        format(CSS_FOR_NAV_OPTIONS, main_nav_option_count))
+        href_elems = self.wait_for_css_for_all_elements(
+            f"{CSS_FOR_NAV_OPTIONS}:nth-child({main_nav_option_count}) > ul > li [href]")
+
         href_and_status_code_list = []
         for each_elem in href_elems:
             href_request = requests.head(each_elem.get_attribute('href'))
@@ -71,7 +71,3 @@ class HomePage(BasePage):
         product_option_to_be_clicked.click()
         time.sleep(3)
         return product_text
-
-
-
-

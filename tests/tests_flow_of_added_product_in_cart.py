@@ -32,7 +32,7 @@ class FlaoniProductCategoryTests(TestsBase):
         self.assertEqual(self.product_category_page.get_product_page_header_title_text(), clicked_product_text)
 
         selected_product_brand_name = self.product_category_page.choose_random_product_from_category()
-        self.assertEqual(self.product_details_page.get_selected_product_type(), selected_product_brand_name)
+        self.assertEqual(self.product_details_page.get_selected_product_name(), selected_product_brand_name)
 
         # Click on ADD to cart button
         self.product_details_page.get_add_to_cart_button().click()

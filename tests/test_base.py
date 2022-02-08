@@ -3,14 +3,19 @@ Flaconi Home Page Tests
 """
 import unittest
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 
 
 class TestsBase(unittest.TestCase):
     """
     Base Test Class
     """
+    opts = Options()
+    opts.log.level = 'trace'
+
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        # self.driver = webdriver.Chrome()
+        self.driver = webdriver.Firefox()
         self.driver.maximize_window()
 
     def tearDown(self):
