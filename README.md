@@ -2,19 +2,19 @@
 
 # Flaconi-e2e-tests
 
-Pre reqs:
+###Pre reqs:
 
 - Python 3.8
 - Browser Chrome
 - Chrome Driver
 
-Installations:
+###Installations:
 
 1- Install selenium `pip3 install selenium`
 
 2- Install nose for execution of tests `pip3 install nose`
 
-# Running Tests
+## Running Tests
 
 1- To run all the tests: nosetests -v
 
