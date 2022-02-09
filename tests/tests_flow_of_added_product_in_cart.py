@@ -43,7 +43,7 @@ class FlaoniProductCategoryTests(TestsBase):
         self.product_details_page.get_go_to_the_cart_button().click()
         self.assertTrue(self.shopping_cart_page.is_browser_on_page())
 
-        # Enter wrong Voucher and click submit button
+        # Enter wrong Voucher, click submit button and validate error message
         self.shopping_cart_page.enter_code_in_voucher_code_field_and_submit(WRONG_VOUCHER_CODE)
         self.assertEqual(self.shopping_cart_page.get_the_error_by_entering_wrong_voucher_code(),
                          WRONG_VOUCHER_CODE)

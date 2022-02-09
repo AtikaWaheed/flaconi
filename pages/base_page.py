@@ -33,7 +33,6 @@ class BasePage:
         Accept cookies using JS
         """
         self.wait_for_ajax()
-        time.sleep(5)
         return self.driver.execute_script(
             f"document.querySelector('{CSS_USER_ROOT}').shadowRoot.querySelector('{css_selector}').click()"
         )
