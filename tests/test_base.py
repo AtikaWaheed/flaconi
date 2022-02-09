@@ -14,8 +14,9 @@ class TestsBase(unittest.TestCase):
     opts.log.level = 'trace'
 
     def setUp(self):
-        # self.driver = webdriver.Chrome()
-        self.driver = webdriver.Firefox()
+        """ can uncomment/comment browsers on the base of requirement"""
+        self.driver = webdriver.Chrome()
+        # self.driver = webdriver.Firefox()
         self.driver.maximize_window()
 
     def tearDown(self):
