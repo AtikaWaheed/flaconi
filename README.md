@@ -10,9 +10,10 @@
 
 1- Clone the repo.
 
-2- `pip3 install -r requirements.txt`
+2- Activate virtualenv `source venv/bin/activate`
 
-3- Activate venv `source venv/bin/activate`
+3- `pip3 install -r requirements.txt`
+
 
 ## Running Tests
 
