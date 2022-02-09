@@ -1,7 +1,7 @@
 
-# <!-- Site: Flaconi -->
+<!-- Site: Flaconi -->
 
-## TestCase Scenario:1- Validate Main Navigation options and Sublinks
+**TestCase Scenario:1- Validate Main Navigation options and Sublinks**
 
 Steps:
 1- Site should be accessible.
@@ -12,7 +12,7 @@ Steps:
 6- Validate all links return 200 status code.
 
 
-## TestCase Scenario:2- Validate FLow of adding product in cart and Voucher code error
+**TestCase Scenario:2- Validate FLow of adding product in cart and Voucher code error**
 
 Steps:
 1- Site should be accessible.
