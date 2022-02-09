@@ -5,14 +5,12 @@
 ## Pre reqs
 
 - Python 3.8
-- Browser Chrome
-- Chrome Driver
 
 ## Installations
 
-1- Install selenium `pip3 install selenium`
+1- Install selenium `pip3 install selenium` (please see requirement.txt for version)
 
-2- Install nose for execution of tests `pip3 install nose`
+2- Install nose for execution of tests `pip3 install nose` (please see requirement.txt for version)
 
 ## Running Tests
 
