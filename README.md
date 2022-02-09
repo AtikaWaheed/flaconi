@@ -4,13 +4,11 @@
 
 ## Pre reqs
 
-- Python 3.8
+- Python 3.6+
 
 ## Installations
 
-1- Install selenium `pip3 install selenium` (please see requirement.txt for version)
-
-2- Install nose for execution of tests `pip3 install nose` (please see requirement.txt for version)
+1- `pip3 install -r requirements.txt`
 
 ## Running Tests
 
@@ -18,6 +16,6 @@
 
 2- To run all tests in a file: nosetests tests/file_name.py -v
 
-3- To run all tests in a class: nosetests test_cases/file_name.py:ClassName -v
+3- To run all tests in a class: nosetests tests/file_name.py:ClassName -v
 
-4- To run a single test: nosetests test_cases/file_name.py:ClassName.test_name -v
+4- To run a single test: nosetests tests/file_name.py:ClassName.test_name -v

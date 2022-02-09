@@ -3,13 +3,13 @@ from pages.main_home_page import HomePage
 from constants import HOME_PAGE_TITLE, CSS_COOKIES
 
 
-class FlaoniHomePageTests(TestsBase):
+class FlaconiHomePageTests(TestsBase):
     """
     This class contains all Landing Page test functions
     """
 
     def setUp(self):
-        super(FlaoniHomePageTests, self).setUp()
+        super(FlaconiHomePageTests, self).setUp()
         self.home_page = HomePage(self.driver)
 
     def test_is_browser_on_page(self):
@@ -26,5 +26,4 @@ class FlaoniHomePageTests(TestsBase):
         2- Hover over makeup option and validate status code for all sublinks
         """
         self.home_page.visit()
-        self.home_page.privacy_accept_cookies(CSS_COOKIES)
         self.assertTrue(self.home_page.hover_over_main_nav_option_and_verify_all_sublinks(4))

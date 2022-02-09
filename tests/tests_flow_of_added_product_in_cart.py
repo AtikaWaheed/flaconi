@@ -27,7 +27,6 @@ class FlaoniProductCategoryTests(TestsBase):
         5- Validate product brand header text on details page.
         """
         self.home_page.visit()
-        self.home_page.privacy_accept_cookies(CSS_COOKIES)
         clicked_product_text = self.home_page.click_any_main_nav_option()
         self.assertEqual(self.product_category_page.get_product_page_header_title_text(), clicked_product_text)
 

@@ -3,7 +3,10 @@ Flaconi Product Category Page
 """
 import random
 from pages.base_page import BasePage
-from constants import CSS_PROD_TITLE, CSS_FOR_ALL_PROD_ITEMS
+from constants import (
+    CSS_PROD_TITLE,
+    CSS_FOR_ALL_PROD_ITEMS
+)
 
 
 class ProductsCategoryPage(BasePage):

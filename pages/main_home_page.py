@@ -3,34 +3,27 @@ Flaconi Main Home Page
 """
 import requests
 from pages.base_page import BasePage
-from constants import BASE_URL, CSS_FOR_NAV_OPTIONS, CSS_FOOTER
 from selenium.webdriver.common.action_chains import ActionChains
 import time
+from constants import (
+    BASE_URL,
+    CSS_FOR_NAV_OPTIONS,
+    CSS_FOOTER
+)
 
 
 class HomePage(BasePage):
     """
     This class contains all functions on Flaconi Home Page
     """
-    url = BASE_URL
 
     def is_browser_on_page(self):
         """
         check browser is on home page
         """
-        self.wait_for_ajax()
         page_title = self.driver.title
         self.wait_for_visibility_of_element(CSS_FOOTER)
         return page_title
-
-    def privacy_accept_cookies(self, css_selector):
-        """
-        Accept cookies using JS
-        """
-        self.wait_for_ajax()
-        self.driver.implicitly_wait(3)
-        return self.driver.execute_script(
-            f"document.querySelector('#usercentrics-root').shadowRoot.querySelector('{css_selector}').click()")
 
     def get_main_nav_option(self, main_nav_option_count):
         """
@@ -52,14 +45,11 @@ class HomePage(BasePage):
         href_elems = self.wait_for_css_for_all_elements(
             f"{CSS_FOR_NAV_OPTIONS}:nth-child({main_nav_option_count}) > ul > li [href]")
 
-        href_and_status_code_list = []
         for each_elem in href_elems:
             href_request = requests.head(each_elem.get_attribute('href'))
-            print(href_request.status_code)
-            href_and_status_code_list.append((each_elem.get_attribute('href'), href_request.status_code))
             if href_request.status_code != 200:
-                print("Invalid Link")
-        return href_and_status_code_list
+                return False
+        return True
 
     def click_any_main_nav_option(self):
         """

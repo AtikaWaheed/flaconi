@@ -7,7 +7,7 @@ from constants import (
     CSS_VOUCHER_CODE_FIELD,
     CSS_VOUCHER_CODE_SUBMIT_BUTTON,
     CSS_ERR_WRONG_CODE
-    )
+)
 
 
 class ShoppingCartPage(BasePage):

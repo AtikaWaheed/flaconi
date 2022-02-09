@@ -5,9 +5,10 @@ from pages.base_page import BasePage
 from constants import (
     CSS_PROD_DETAIL_SECTION,
     CSS_PROD_NAME,
-    CSS_ADD_TO_CART_BUTTON, CSS_ADDED_PROD_IN_MODAL,
+    CSS_ADD_TO_CART_BUTTON,
+    CSS_ADDED_PROD_IN_MODAL,
     CSS_GO_TO_CART_BUTTON
-    )
+)
 
 
 class ProductDetailsPage(BasePage):

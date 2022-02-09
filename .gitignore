@@ -1,4 +1,7 @@
 __pycache__/
 .idea
 .DS_Store/
+*/.DS_Store/
 .venv/
+geckodriver.log
+*.pyc
