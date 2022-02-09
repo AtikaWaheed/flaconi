@@ -8,7 +8,11 @@
 
 ## Installations
 
-1- `pip3 install -r requirements.txt`
+1- Clone the repo.
+
+2- `pip3 install -r requirements.txt`
+
+3- Activate venv `source venv/bin/activate`
 
 ## Running Tests
 
